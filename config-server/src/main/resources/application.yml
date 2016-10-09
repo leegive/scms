@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/leegive/scms.git
+          search-paths: config-repo
+          username: leegive
+          password: Wj173749
+    stream:
+      kafka:
+        binder:
+          brokers: localhost:9092
+          zk-nodes: localhost:2181
