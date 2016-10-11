@@ -1,3 +1,5 @@
+server:
+  port: 8888
 spring:
   application:
     name: config-server
@@ -14,3 +16,7 @@ spring:
         binder:
           brokers: localhost:9092
           zk-nodes: localhost:2181
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
