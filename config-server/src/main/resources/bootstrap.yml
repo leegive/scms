@@ -1,14 +1,14 @@
 spring:
   application:
-    name: demo-service
+    name: config-server
   cloud:
     config:
-#      discovery:
-#        enabled: true
-#        service-id: config-server
-      profile: dev
-      uri: http://localhost:8888
-      label: master
+      server:
+        git:
+          uri: https://github.com/leegive/scms.git
+          search-paths: config-repo
+          username: leegive
+          password: Wj173749
     stream:
       kafka:
         binder:
